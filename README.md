@@ -1,1 +1,1 @@
-This Repo is the playground for of linux
+This Repo is the playground for linux
