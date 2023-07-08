@@ -3,6 +3,7 @@
 	and reboot of raspberry pi.
 	You need a pushbotton, Connect it to the below mentioned GPIO pin
 '''
+
 '''
 	First create a python file with the below code in a specific folder
 	and copy the path of the file. 
