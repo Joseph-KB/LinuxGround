@@ -4,6 +4,7 @@
     
     
     If keypad is held on reading psition the corersponding eight wires are connected as mentioned below.
+    Below mentined numbers are the GPIO's of raspberrypi
 
     |   |   |   |   |   |   |   |
 
