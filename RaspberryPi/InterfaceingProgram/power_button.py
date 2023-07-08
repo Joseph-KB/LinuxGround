@@ -17,11 +17,9 @@
 
 '''
 
-
-
-
 from gpiozero import Button
 import subprocess
+import time
 
 
 # Set up the button for power control
@@ -29,16 +27,16 @@ power_button = Button(3,hold_time=3)  # GPIO pin for power button
 
 def shutdown():
     print("Shutting down...")
-    subprocess.run(["sudo", "shutdown"])
+    subprocess.run(["sudo", "shutdown","-h"])
 
 def reboot():
     print("Rebooting.....")
-    subprocess.run(["sudo", "shutdown","-r"])
+    subprocess.run(["sudo", "reboot"])
+    time.sleep(15)
 
 # Define the button behavio
 power_button.when_pressed = shutdown
 power_button.when_held = reboot
-
 
 # Keep the script running
 while True:
