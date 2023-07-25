@@ -18,6 +18,42 @@
 
 '''
 
+'''
+	In Kali linux -kalipi - raspberryPi
+	Check what all command combinations works
+	pip install gpiozero
+	sudo apt install python3-gpiozero
+
+	groups kali 	-- to know whether gpiozero is in user group if not
+	sudo groupadd gpio
+	sudo chown root:gpio /dev/gpioemem
+	sudo chmod g+rw /dev/gpiomem
+	sudo usermod -aG gpio kali
+
+
+	for enableing this power function after reboot do the following
+	make a copy of the below code anywhere else and make it an executable file using chmod
+
+	make another file power_on_switch.service in /etc/systemd/system
+	In the file add the following
+	
+	[Unit]
+	Description=PowerON_Off using Switch
+	After=network.target
+
+	[Service]
+	ExecStart=/usr/bin/python3 /system_conf_files/power_button.py
+	Restart=always
+	User=root
+	Group=root
+	Type=simple
+
+	[Install]
+	WantedBy=multi-user.target
+
+
+'''
+
 from gpiozero import Button
 import subprocess
 import time
