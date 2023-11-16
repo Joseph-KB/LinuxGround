@@ -1,0 +1,9 @@
+sudo systemctl list-units failed	# shows the services of systemctl having failed status 
+sudo systemctl restart/start/enable service_name.service	# restart the specified services
+
+sudo apt update
+sudo apt full-upgrade -y
+sudo apt install <name of software>
+sudo apt autoclean/autoremove
+
+hostname -I 		prints IP of this device
